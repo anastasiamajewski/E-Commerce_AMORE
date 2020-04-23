@@ -18,13 +18,13 @@ const categories = mongoose.model('categories', {
 
 )
 
-router.post('/post',(request, response) =>{
+router.post('/',(request, response) =>{
 categories.create({name:request.body.name, description:request.body.description, categoryId:request.body.categoryId})
 .then(() => response.json({created:true}))
 .catch(() => response.json({created:false}))
 })
 
-router.get('/get', (request, response) => {
+router.get('/', (request, response) => {
     categories.find().then(data => {
         response.json(data)
 })

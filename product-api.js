@@ -14,19 +14,22 @@ const products = mongoose.model('products', {
         price: {
           type: Number,
         },
+        productId: {
+          type: Number,
+        },
         categoryId: {
           type: Number
         }
       }
 )
 
-router.post('/post',(request, response) =>{
-products.create({name:request.body.name, description:request.body.description, price:request.body.price, categoryId:request.body.categoryId})
+router.post('/',(request, response) =>{
+products.create({name:request.body.name, description:request.body.description, price:request.body.price, productId:request.body.productId, categoryId:request.body.categoryId})
 .then(() => response.json({created:true}))
 .catch(() => response.json({created:false}))
 })
 
-router.get('/get', (request, response) => {
+router.get('/', (request, response) => {
     products.find().then(data => {
         response.json(data)
 })
