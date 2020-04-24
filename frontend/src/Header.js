@@ -8,7 +8,7 @@ return (
 
 <HeaderStyled>
     <LinkStyled exact to="/">Home</LinkStyled>
-    <LinkStyled to="/products">Produktdetails</LinkStyled>
+    <LinkStyled to="/productdetails">Produktdetails</LinkStyled>
     <LinkStyled to="/shoppingcart">Warenkorb</LinkStyled>
     <LinkStyled to="/order">Bestellung</LinkStyled>
 </HeaderStyled>

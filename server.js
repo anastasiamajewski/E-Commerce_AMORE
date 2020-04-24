@@ -1,11 +1,13 @@
 import express from "express"
 import bodyParser from 'body-parser'
+import cors from 'cors'
 import productRoutes from "./product-api"
 import categoryRoutes from "./category-api"
 import shoppingcartRoutes from "./shoppingcart"
 import orderRoutes from "./order"
 
 const server = express()
+server.use(cors())
 server.use(bodyParser.json({extended: true}));
 server.use(bodyParser.urlencoded({extended: true}));
 
