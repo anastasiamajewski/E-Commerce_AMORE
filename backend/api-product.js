@@ -3,6 +3,12 @@ import { products } from "./models";
 
 const router = Router();
 
+router.get("/", (request, response) => {
+  products.find().then((data) => {
+    response.json(data);
+  });
+});
+
 router.post("/", (request, response) => {
   products
     .create({
@@ -14,12 +20,6 @@ router.post("/", (request, response) => {
     })
     .then(() => response.json({ created: true }))
     .catch(() => response.json({ created: false }));
-});
-
-router.get("/", (request, response) => {
-  products.find().then((data) => {
-    response.json(data);
-  });
 });
 
 export default router;

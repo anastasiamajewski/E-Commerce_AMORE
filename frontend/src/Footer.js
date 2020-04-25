@@ -1,18 +1,14 @@
-import React from 'react'
-import styled from 'styled-components/macro'
+import React from "react";
+import styled from "styled-components/macro";
 
-export default function Footer(){
-    return(
-        <FooterStyled>
-            &copy; AMORE GmbH
-        </FooterStyled>
-    )
+export default function Footer() {
+  return <FooterStyled>&copy; AMORE GmbH</FooterStyled>;
 }
 
 const FooterStyled = styled.footer`
-  background-color: #964F4C;
+  background-color: #964f4c;
   color: white;
   display: flex;
-  align-items: end;
-  text-align: center;
-`
+  align-items: center;
+  justify-content: center;
+`;
