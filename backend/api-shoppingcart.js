@@ -15,8 +15,6 @@ router.post("/", (request, response) => {
     .then((product) => {
       shoppingcart.create({
         product: product,
-        name: request.body.name,
-        productId: request.body.productId,
         quantity: request.body.quantity,
       });
     })

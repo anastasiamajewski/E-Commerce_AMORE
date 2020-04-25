@@ -15,7 +15,6 @@ router.post("/", (request, response) => {
       name: request.body.name,
       description: request.body.description,
       price: request.body.price,
-      productId: request.body.productId,
       categoryId: request.body.categoryId,
     })
     .then(() => response.json({ created: true }))

@@ -9,7 +9,7 @@ export const categories = mongoose.model("categories", {
   description: {
     type: String,
   },
-  categoryId: {
+  id: {
     type: Number,
   },
 });
@@ -24,9 +24,6 @@ const productSchema = {
   price: {
     type: Number,
   },
-  productId: {
-    type: Number,
-  },
   categoryId: {
     type: Number,
   },
@@ -38,7 +35,7 @@ export const shoppingcart = mongoose.model("shoppingcart", {
   productId: {
     type: String,
   },
-  amount: {
+  quantity: {
     type: Number,
   },
   product: productSchema,
