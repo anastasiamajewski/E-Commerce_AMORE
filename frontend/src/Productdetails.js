@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 
 export default function Productdetails() {
   const [productData, setProductData] = useState([]);
-  const [quantity, setQuantity] = useState([1]);
+  const [quantity, setQuantity] = useState("1");
 
   useEffect(() => {
     fetch("http://localhost:8080/products")
