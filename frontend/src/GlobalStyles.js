@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-export default createGlobalStyle `
+import { createGlobalStyle } from "styled-components";
+export default createGlobalStyle`
 
 *
 {
@@ -23,4 +23,4 @@ main {
 }
 
 
-`
+`;

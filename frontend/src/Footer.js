@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
@@ -41,3 +42,19 @@ export default function Footer() {
     }
     
     `
+=======
+import React from "react";
+import styled from "styled-components/macro";
+
+export default function Footer() {
+  return <FooterStyled>&copy; AMORE GmbH</FooterStyled>;
+}
+
+const FooterStyled = styled.footer`
+  background-color: #964f4c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+>>>>>>> f213ba2a1f332fc5dbcbbae1848e2a86a9f3ef56
