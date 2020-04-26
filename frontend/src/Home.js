@@ -1,27 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
-const [productData, setProductData] = useState([])
+  const [productData, setProductData] = useState([]);
 
-useEffect(() => {
+  useEffect(() => {
     fetch("http://localhost:8080/products")
-    .then(response => (response.json()))
-    .then(data => setProductData(data))
-    .catch(error => console.log('error', error))
-  
-  }, [])
+      .then((response) => response.json())
+      .then((data) => setProductData(data))
+      .catch((error) => console.log("error", error));
+  }, []);
 
-return (
-<main>
-    <h2>Produkte</h2>
-    <ul>
+  return (
+    <main>
+      <h2>Hier findest du einen Überlick über unsere Produkte:</h2>
+      <ul>
         {productData.map((product) => (
-        
-                <li key={product.id}>{product.name}</li>
-    
+          <li key={product.id}>- {product.name}</li>
         ))}
-    </ul>   
-</main>
-    )
-        
+      </ul>
+    </main>
+  );
 }
